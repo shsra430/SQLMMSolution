@@ -1,5 +1,5 @@
-![alt text](sql murder mystery.PNG)
--- Begin by looking at the crime_scene_report table  
+-Begin by looking at the crime_scene_report table  
+````sql
 SELECT 
     *
 FROM
@@ -7,8 +7,11 @@ FROM
 WHERE
     city = 'SQL City' AND date = '20180115'
         AND type = 'murder';
+````
 -- There are two witnesses. One lives on "Northwestern Dr" and the second named Annabel, 
 -- lives somewhere on "Franklin Ave". Let's get more information about these witnesses.
+
+````sql
 SELECT 
     *
 FROM
@@ -17,7 +20,10 @@ WHERE
     address_street_name = 'Northwestern Dr'
 ORDER BY address_number DESC
 LIMIT 1;
--- This is Morty Shapiro with id 14887        
+````
+-- This is Morty Shapiro with id 14887    
+
+````sql
 SELECT 
     *
 FROM
@@ -25,17 +31,25 @@ FROM
 WHERE
     address_street_name = 'Franklin Ave'
         AND name LIKE '%Annabel%';
+````
+
 -- This is Annabel Miller with id 16371
 -- Let us now look at the interviews of these witnesses
 -- Only an interview of Annabel exists
+
+````sql
+
 SELECT 
     *
 FROM
     get_fit_now_member
 WHERE
     person_id = '16371';
+````
 -- Here she says that she recognizes the killer from her gym and has seen the killer on 9th January in the gym.
 -- Let's find out who all checked into the gym on Jan 9th in the duration when Annabel was present.
+
+````sql
 SELECT 
     *
 FROM
@@ -46,19 +60,23 @@ WHERE
     check_in_date = '20180109'
         AND check_in_time <= 1600
         AND check_out_time >= 1700;
+````
 -- We now know that the person id of these two are: 28819 and 67318. Let us look for their interviews
 -- An interview of Jeremy Bowers (person_id 67318) seems promising
+
+````sql
 SELECT 
     *
 FROM
     interview
 WHERE
     person_id = '67318';
+````
 -- he says he was hired by a woman with lot of money
 -- between 65 and 67 inches , red hair and drives a tesla model S. 
 -- Attended a SQL Symphony Concert 3 times in december 2017
 -- That's a lot of clues!
-
+````sql
 SELECT 
     *
 FROM
@@ -83,7 +101,7 @@ WHERE
     hair_color = 'red'
         AND car_make = 'Tesla'
         AND car_model = 'Model S'
-
+````
 -- And et voilà!
 
 Try the challenge to know how the culprit is!
