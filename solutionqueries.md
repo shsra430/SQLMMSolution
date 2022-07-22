@@ -77,7 +77,7 @@ WHERE
     person_id = '67318';
 ````
 
--- He says he was hired by a woman with lot of money
+-  He says he was hired by a woman with lot of money
 
 - Between 65 and 67 inches , red hair and drives a tesla model S. 
 - Attended a SQL Symphony Concert 3 times in december 2017
