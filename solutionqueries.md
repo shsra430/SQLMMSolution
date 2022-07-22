@@ -25,7 +25,7 @@ WHERE
 ORDER BY address_number DESC
 LIMIT 1;
 ````
--- This is Morty Shapiro with id 14887    
+-  This is Morty Shapiro with id 14887    
 
 ````sql
 SELECT 
