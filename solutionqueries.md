@@ -1,8 +1,15 @@
 ### :policewoman: SQL MURDER MYSTERY CHALLENGE :policewoman:
+
+💡 Built using MySQL
+- SQL Level: Beginner
+- SQL joins, Sub-Queries, Wildcard Operators
+
 ![image](https://user-images.githubusercontent.com/54994083/180205133-97c5cee4-fa59-4322-a156-65f083dfbb09.png)
 
-:female_detective: This is a fun challenge hosted [here](https://mystery.knightlab.com/) for SQL enthusiasts. I thoroughly enjoyed solving this mystery. 
-- Let us begin by looking at the `crime_scene_report` table  
+:female_detective: This is a fun challenge hosted [here](https://mystery.knightlab.com/) for SQL enthusiasts. I thoroughly enjoyed solving this mystery. So, Let's solve the case!
+***
+
+- We can start by looking at the `crime_scene_report` table  
 ````sql
 SELECT 
     *
